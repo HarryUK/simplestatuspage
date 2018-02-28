@@ -14,7 +14,7 @@
             <div class="jumbotron">
                 <h1>Site:</h1>
                 <?php
-                $main = ''; // Put your domain here
+                $main = ''; // Put your IP here
                 if(gethostbyname($main) != $main ) {
                     // If online
                     echo "<h5>" . $main . " is online.</h5>\n";
