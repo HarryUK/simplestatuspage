@@ -17,10 +17,10 @@
                 $main = '' // Put your domain here;
                 if(gethostbyname($main) != $main ) {
                     // If online
-                    echo "<h5>" . $main . " is <span class='online'>online</span>.</h5>\n";
+                    echo "<h5>" . $main . " is online.</h5>\n";
                 } else {
                     // If offline
-                    echo  "<h5>" . $main . " is <span class='offline'>offline</span>.</h5>\n";
+                    echo  "<h5>" . $main . " is offline.</h5>\n";
                 }
                 ?>
             </div>
