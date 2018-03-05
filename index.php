@@ -14,8 +14,8 @@
             <div class="jumbotron">
                 <h1>Site:</h1>
                 <?php
-                $hostname = ""; // server hostname
-                $timeout = 4; // timeout in seconds
+                $hostname = ""; // Put hostname/domain
+                $timeout = 3; // Put timeout
 
                 $ip = gethostbyname($hostname);
                 $checker = fsockopen($ip, '80', $errno, $errstr, $timeout); 
