@@ -14,13 +14,17 @@
             <div class="jumbotron">
                 <h1>Site:</h1>
                 <?php
-                $main = ''; // Put your IP here
-                if(gethostbyname($main) != $main ) {
-                    // If online
-                    echo "<h5>" . $main . " is online.</h5>\n";
+                $hostname = ""; // server hostname
+                $timeout = 4; // timeout in seconds
+
+                $ip = gethostbyname($hostname);
+                $checker = fsockopen($ip, '80', $errno, $errstr, $timeout); 
+
+                if ($checker) {
+                    fclose($checker);
+                    echo "<h5>" . $hostname . " is online.</h5>\n";
                 } else {
-                    // If offline
-                    echo  "<h5>" . $main . " is offline.</h5>\n";
+                    echo  "<h5>" . $hostname . " is offline.</h5>\n";
                 }
                 ?>
             </div>
